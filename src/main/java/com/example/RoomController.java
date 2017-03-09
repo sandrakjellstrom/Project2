@@ -1,6 +1,5 @@
 package com.example;
 
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -17,12 +16,6 @@ public class RoomController {
 
     @Autowired
     private RoomInterface roomInterface;
-
-
-    /*@GetMapping("/hej")
-    public ModelAndView rooms () {
-        return new ModelAndView("/index");
-    }*/
 
     @GetMapping("/login")
     public String login() {
