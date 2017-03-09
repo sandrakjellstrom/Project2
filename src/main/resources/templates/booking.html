@@ -3,11 +3,12 @@
 <head>
     <meta charset="UTF-8"/>
     <title>Title</title>
+    <link rel="stylesheet" href="/styles.css"/>
 </head>
 <body>
 <ul>
 <li th:each="lr : ${listRooms}">
-    <a th:text="${lr.RoomID}" />
+    <a th:text="${lr.Name} + ' ' + ${lr.Chairs} + ' ' + ${lr.Accessories}"/>
 </li>
 </ul>
 </body>
