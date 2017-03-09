@@ -34,7 +34,7 @@ public class RoomController {
     public String login(@RequestParam String userid, @RequestParam String password, HttpSession session) {
         if (userid.equals("admin") && password.equals("admin")) {
             session.setAttribute("user", userid);
-            return "admin";
+            return "booking";
         }
         return "login";
     }
@@ -43,8 +43,7 @@ public class RoomController {
     public String secret(HttpSession session) {
         if (session.getAttribute("user") != null) {
             return "admin";
-        }
-        else
+        } else
             return "login";
     }
 
@@ -57,17 +56,22 @@ public class RoomController {
     }
 
     @GetMapping("/booking")
-    public ModelAndView listRooms() throws SQLException {
-        return new ModelAndView("/booking")
-                .addObject("listRooms", roomInterface.listRooms());
-
-
-
+    public ModelAndView listRooms(HttpSession session) throws SQLException {
+        if (session.getAttribute("user") != null) {
+            return new ModelAndView("/booking")
+                    .addObject("listRooms", roomInterface.listRooms());
+        }
+        return new ModelAndView("login");
     }
-    @PostMapping ("/rooms")
-    public ModelAndView nochairs (@RequestParam int nochairs) throws SQLException {
-        List<Rooms> rooms=roomInterface.listnochairs(nochairs);
-return new ModelAndView("rooms").addObject("listRooms", rooms);
+
+
+    @PostMapping("/rooms")
+    public ModelAndView nochairs(@RequestParam int nochairs, HttpSession session) throws SQLException {
+        List<Rooms> rooms = roomInterface.listnochairs(nochairs);
+        if (session.getAttribute("user") != null) {
+            return new ModelAndView("rooms").addObject("listRooms", rooms);
+        }
+        return new ModelAndView("login");
     }
 }
 
