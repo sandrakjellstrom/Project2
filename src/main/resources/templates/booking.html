@@ -6,10 +6,15 @@
     <link rel="stylesheet" href="/styles.css"/>
 </head>
 <body>
-<ul>
-<li th:each="lr : ${listRooms}">
-    <a th:text="${lr.Name} + ' ' + ${lr.Chairs} + ' ' + ${lr.Accessories}"/>
-</li>
-</ul>
+<form Action="/rooms" id="rooms" method="post">
+    <input type="submit" value="ok"/>
+</form>
+<select name="nochairs" form="rooms">
+    <option value="" disabled="" selected="">Number of persons</option>
+    <option value="4">Are you less then 4 people?</option>
+    <option value="8">Are you between 5-8 people?</option>
+    <option value="10">Are you more than 8 people?</option>
+</select>
+
 </body>
 </html>

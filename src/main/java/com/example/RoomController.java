@@ -10,6 +10,7 @@ import org.springframework.web.servlet.ModelAndView;
 
 import javax.servlet.http.HttpSession;
 import java.sql.SQLException;
+import java.util.List;
 
 @Controller
 public class RoomController {
@@ -60,6 +61,13 @@ public class RoomController {
         return new ModelAndView("/booking")
                 .addObject("listRooms", roomInterface.listRooms());
 
+
+
+    }
+    @PostMapping ("/rooms")
+    public ModelAndView nochairs (@RequestParam int nochairs) throws SQLException {
+        List<Rooms> rooms=roomInterface.listnochairs(nochairs);
+return new ModelAndView("rooms").addObject("listRooms", rooms);
     }
 }
 
