@@ -4,6 +4,7 @@
     <meta charset="UTF-8"/>
     <title>Title</title>
     <link rel="stylesheet" href="/styles.css"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 </head>
 <body>
 <ul>
@@ -11,5 +12,15 @@
     <a th:text="${lr.Name} + ' ' + ${lr.Chairs} + ' ' + ${lr.Accessories}"/>
 </li>
 </ul>
+
+<h2 id="title"></h2>
+<h3 id="subTitle"></h3>
+<div><img id="imageUrl"/></div>
+<p id="name"></p>
+<p id="description"></p>
+<ul id="options"></ul>
+<script src="node_modules/jquery/dist/jquery.js"></script>
+<script src="data.js"></script>
+<script src="func.js"></script>
 </body>
 </html>
