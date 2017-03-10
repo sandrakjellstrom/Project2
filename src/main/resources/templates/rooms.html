@@ -9,6 +9,7 @@
 <ul>
     <li th:each="lr : ${listRooms}">
         <a th:text="${lr.Name} + ' ' + ${lr.Chairs} + ' ' + ${lr.Accessories}"/>
+        <img th:src="${lr.img}"/>
     </li>
 </ul>
 </body>

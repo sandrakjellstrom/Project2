@@ -35,3 +35,12 @@ color: blue;
 .tab {
 	margin-left:40px;
 }
+img {
+    height: 400px;
+    width: 400px;
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    transform: rotate(90deg);
+}

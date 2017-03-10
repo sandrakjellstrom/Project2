@@ -31,7 +31,7 @@ public class RoomRepository implements RoomInterface {
     }
 
     private Rooms rsRooms(ResultSet rs) throws SQLException {
-        return new Rooms(rs.getInt("RoomID"), rs.getString("Name"), rs.getInt("Chairs"), rs.getString("Accessories"));
+        return new Rooms(rs.getInt("RoomID"), rs.getString("Name"), rs.getInt("Chairs"), rs.getString("Accessories"), rs.getString("img"));
     }
 
     public List<Rooms> listnochairs(int chairs) throws SQLException {
