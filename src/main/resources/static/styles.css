@@ -1,45 +1,73 @@
 *{font-family: Arial, Times, serif;
-  /*text-align:justify;*/
-  margin-top: 5%;
-  margin-bottom: 10%;
-  margin-right: 10%;
-  margin-left: 10%;
+    font-family: Arial, Times, serif;
 }
-/*table{
+#roompic {
+    margin-left: 10px;
+    margin-top: 30px;
+    height: auto;
+    margin-bottom: 40px;
+    width: 250px;
+    transform: rotate(90deg);
+}
+#rooms1{
+
+}
+#rooms2{
+    font-size: 20px;
+    color: black;
+    list-style-type: none;
+    display: inline-block;
+    text-align: center;
+}
+#login{
+    float: left;
+    text-align: right;
+    height: 20px;
+}
+li {
+    color: #00aa3c;
+}
+a:link {
+    text-decoration: none;
+    color: #00aa3c;
+}
+
+a:visited {
+    text-decoration: none;
+    color: #00aa3c;
+}
+
+a:hover {
+    text-decoration: none;
+    color: #000000;
+}
+
+a:active {
+    text-decoration: none;
+    color: #000000;
+}
+
+table{
  background-color: white;
  padding: 10px;
  border: 5px solid gray;}
 
 p.inledning { font-weight: bold;
 		margin-bottom: 1%;
-}*/
+}
 body {
+    height: 700px;
+    background-image: url("meeting-room.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
-    background-image: url("bakgrundsbild.jpg");
-}
-/*
-#panel{background-color:#F5F5DC}
-#panel2{background-color:#F5F5DC}
- */
-body {background-color: #ffffff;
-}
-/*
-h1 {
-    color: #63631c;
-    
-}
-h2 {
-    color: #777722;
-}
-h3 {
-    color: #8b8b27;
-}
-code { 
-color: blue;
+    background-color: #ffffff;
 }
 
-.tab {
-	margin-left:40px;
-}*/
+h1 {
+    color: #00aa3c;
+}
+h1.hover {
+    color: black;
+}
+

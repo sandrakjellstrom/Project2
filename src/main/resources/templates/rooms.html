@@ -6,10 +6,11 @@
     <link rel="stylesheet" href="/styles.css"/>
 </head>
 <body>
-<ul>
-    <li th:each="lr : ${listRooms}">
+<h1>Academy a part of Academic Works conference room</h1>
+<ul id="rooms1">
+    <li id="rooms2" th:each="lr : ${listRooms}">
         <a th:text="${lr.Name} + ' ' + ${lr.Chairs} + ' ' + ${lr.Accessories}"/>
-        <img th:src="${lr.img}"/>
+        <img id="roompic" th:src="${lr.img}"/>
     </li>
 </ul>
 </body>
