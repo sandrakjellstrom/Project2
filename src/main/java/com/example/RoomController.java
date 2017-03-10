@@ -64,6 +64,14 @@ public class RoomController {
         return new ModelAndView("login");
     }
 
+    @GetMapping("/rooms")
+    public String rooms(HttpSession session) {
+        if (session.getAttribute("user") != null) {
+            return "rooms";
+        } else
+            return "login";
+    }
+
 
     @PostMapping("/rooms")
     public ModelAndView nochairs(@RequestParam int nochairs, HttpSession session) throws SQLException {

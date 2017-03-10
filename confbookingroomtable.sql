@@ -1,0 +1,24 @@
+USE [Academy_Projekt2]
+GO
+
+/****** Object:  Table [CONFBOOKING].[ROOMS]    Script Date: 2017-03-10 08:30:52 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [CONFBOOKING].[ROOMS](
+	[RoomID] [int] IDENTITY(1,1) NOT NULL,
+	[Name] [varchar](40) NOT NULL,
+	[Chairs] [int] NOT NULL,
+	[Accessories] [varchar](80) NULL,
+	[img] [varchar](200) NULL,
+PRIMARY KEY CLUSTERED 
+(
+	[RoomID] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+
+GO
+

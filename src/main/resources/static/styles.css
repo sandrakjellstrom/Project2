@@ -1,23 +1,31 @@
 *{font-family: Arial, Times, serif;
-  text-align:justify;
-  //margin-top: 10%;
+  /*text-align:justify;*/
+  margin-top: 5%;
   margin-bottom: 10%;
   margin-right: 10%;
   margin-left: 10%;
 }
-table{ 
- background-color: white;   
+/*table{
+ background-color: white;
  padding: 10px;
  border: 5px solid gray;}
 
 p.inledning { font-weight: bold;
 		margin-bottom: 1%;
+}*/
+body {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-image: url("bakgrundsbild.jpg");
 }
+/*
 #panel{background-color:#F5F5DC}
 #panel2{background-color:#F5F5DC}
-  
-body {background-color: #dfecdf;
+ */
+body {background-color: #ffffff;
 }
+/*
 h1 {
     color: #63631c;
     
@@ -34,4 +42,4 @@ color: blue;
 
 .tab {
 	margin-left:40px;
-}
+}*/
