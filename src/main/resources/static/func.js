@@ -21,10 +21,9 @@ function renderPage(){
     }
 
   for(var l=0; l < page.imageUrl.length; l++){
-      var imageUrl = page.imageUrl[l];
-      var link = $("<img src=''>");
-      link.attr("src", imageUrl)
-      $("#imageUrl").append(imageUrl);
+        var imageUrl = page.imageUrl[l];
+        var link = $("<img src=''>");
+        link.attr("src", imageUrl)
     }
 }
 
